@@ -1,0 +1,29 @@
+{
+  "name": "ampcode-wrapped",
+  "version": "1.0.0",
+  "author": "Rezha Julio",
+  "description": "Generate a personalized Spotify Wrapped-style summary of your Amp usage",
+  "keywords": ["ampcode", "amp", "wrapped", "ai-coding"],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "ampcode-wrapped": "./bin/ampcode-wrapped"
+  },
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "@resvg/resvg-wasm": "^2.6.2",
+    "react": "^19.2.3",
+    "satori": "^0.18.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.2.7",
+    "typescript": "^5.0.0"
+  }
+}
