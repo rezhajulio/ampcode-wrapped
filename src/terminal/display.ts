@@ -48,7 +48,7 @@ function displayKittyProtocol(pngBuffer: Buffer): void {
     const isLast = i + chunkSize >= base64Data.length;
 
     if (i === 0) {
-      process.stdout.write(`\x1b_Ga=T,f=100,m=${isLast ? 0 : 1};${chunk}\x1b\\`);
+      process.stdout.write(`\x1b_Ga=T,f=100,t=d,m=${isLast ? 0 : 1};${chunk}\x1b\\`);
     } else {
       process.stdout.write(`\x1b_Gm=${isLast ? 0 : 1};${chunk}\x1b\\`);
     }

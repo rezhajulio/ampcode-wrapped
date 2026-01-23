@@ -73,7 +73,7 @@ export async function calculateStats(year: number, customDataDir?: string): Prom
         if (msg.usage) {
           totalInputTokens += msg.usage.inputTokens + (msg.usage.cacheCreationInputTokens ?? 0) + (msg.usage.cacheReadInputTokens ?? 0);
           totalOutputTokens += msg.usage.outputTokens;
-          totalCredits += msg.usage.credits;
+          totalCredits += msg.usage.credits ?? 0;
         }
 
         for (const content of msg.content) {
